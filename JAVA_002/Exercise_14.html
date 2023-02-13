@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+    <head>
+        <meta charset="utf-8">
+        <title> Exercise 14 </title>
+    </head>
+    
+    <body>
+        <script>
+            var a = parseInt(prompt("Podaj współczynnik a: "));
+            var b = parseInt(prompt("Podaj współczynnik b: "));
+
+            var x = 0;
+
+            if (a == 0) {
+                if (b == 0) {
+                    document.write("Jest to równanie tożsamościowe");
+                } else {
+                    document.write("Jest to równianie sprzeczne");
+                }
+
+            } else {
+                x = -b / a;
+                document.write("X wynosi: " + x);
+            }
+
+        </script>
+    </body>
+</html>

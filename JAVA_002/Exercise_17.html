@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+    <head>
+        <meta charset="utf-8">
+        <title> Exercise 17 </title>
+    </head>
+
+    <body>
+        <script>
+            var a = parseFloat(prompt("Podaj bok a: "));
+            var b = parseFloat(prompt("Podaj bok b: "));
+            var c = parseFloat(prompt("Podaj bok c: "));
+
+            if (a > 0 || b > 0 || c > 0) {
+                if (a + b > c && a + c > b && b + c > a) {
+                    document.write("Z podanych danych można utowrzyć trójkąta <br>");
+                
+                    if (a == b && b == c) {
+                        document.write("Jest to trójkąt równoboczny");
+                    } else if (a == b || a == c || c == b) {
+                        document.write("Jest to trójkąt równoramienny");
+                    } else if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2)) {
+                        document.write("Jest to trójkąt prostokątny");
+                    } else {
+                        document.write("Jest to trójkąt różnoramienny");
+                    }
+
+                } else if (a + b < c || a + c < b || c + b < a) {
+                    document.write("Z podanych danych nie można utworzyć trójkąta <br>");
+                }    
+            
+            } else {
+                document.write("Wprowadzono błędne dane");
+            }
+
+        </script>
+    </body>
+</html>

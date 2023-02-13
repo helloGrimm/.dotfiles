@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+    <head>
+        <meta charset="utf-8">
+        <title> Exercise 19 </title>
+    </head>
+    
+    <body>
+        <script>
+            var table_width = parseInt(prompt("Podaj szerokość stołu: "));
+            var table_length = parseInt(prompt("Podaj długość stołu: "));
+            var side_of_chair = parseInt(prompt("Podaj bok krzesła: "));
+            
+            if (table_width >= 1 && table_length >= 1 && side_of_chair >= 1 && table_width <= 500000000 && table_length <= 500000000 && side_of_chair <= 500000000) {
+                if (table_width > side_of_chair && table_length > side_of_chair) {
+                    // Ilość krzeseł przy boku a (szerokość stołu), mnożymy *2 ponieważ są dwa boki a
+                    var number_of_chairsA = (Math.floor(table_width / side_of_chair)) * 2;
+
+                    // Od boku b (długość stołu) odejmujemy krzesła przy boku a (szerokość stołu), 
+                    // ponieważ krzesła z boku a (szerokość stołu) zajmują już miejsce
+                    var number_of_chairsB = (Math.floor((table_length - (side_of_chair * 2)) / side_of_chair)) * 2;
+
+                    var result = number_of_chairsA + number_of_chairsB;
+                    document.write("Maksymalna liczba krzeseł, która zmieści się po stołem to: " + result);
+                    
+                } else {
+                    document.write("Pod stołem nie zmieszczą się krzesła");
+                }   
+
+            } else {
+                document.write("Błędnie wprowadzone dane");
+            
+            }
+       
+       </script>
+    </body>
+</html>

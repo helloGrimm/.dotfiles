@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+    <head>
+        <meta charset="utf-8">
+        <title> Exercise 18 </title>
+    </head>
+    
+    <body>
+        <script>
+            var number = parseInt(prompt("Podaj liczbę 5-cio cyfrową: "));
+
+            var reverse_number = 0;
+            var tmp = number;
+
+            while (tmp != 0) {
+                reverse_number = (reverse_number * 10) + (tmp % 10);
+                tmp = Math.floor(tmp / 10);
+            }
+
+            if (reverse_number == number) {
+                document.write("Podana liczba jest palindromem");
+            } else {
+                document.write("Podana liczba nie jest palindromem");
+            }
+
+        </script>
+    </body>
+</html>

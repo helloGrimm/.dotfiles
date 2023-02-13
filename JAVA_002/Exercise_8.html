@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+    <head>
+        <meta charset="utf-8">
+        <title> Exercise 8 </title>
+    </head>
+
+    <body>
+
+        <script>
+            var number_1 = parseFloat(prompt("Podaj pierwszą liczbę: "));
+            var number_2 = parseFloat(prompt("Podaj drugą liczbę: "));
+            var number_3 = parseFloat(prompt("Podaj trzecią liczbę: "))
+
+            if (number_1 == number_2 && number_1 == number_3 && number_2 == number_3) {
+                document.write("Liczby są równe");
+            }  else {
+                if (number_1 < number_3) {
+                    if (number_2 < number_3){
+                        document.write("Liczba " + number_3 + " jest największa");
+                    } else {
+                        document.write("Liczba " + number_2 + " jest największa");
+                    }
+                } else {
+                    document.write("Liczba " + number_1 + " jest największa");
+                }
+            }
+
+        </script>
+
+    </body>
+</html>
